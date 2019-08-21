@@ -10,13 +10,13 @@ Image.MAX_IMAGE_PIXELS = 100000000000
 
 def empty_fill():
     print('empty_fill..............')
-    data_path = 'ZhiChao_Cui/MY/AgriculturalBrainAIChallenge/Datasets/predict'
-    fill_path = 'ZhiChao_Cui/MY/AgriculturalBrainAIChallenge/Datasets/predict/fill'
-    predict_3 = os.path.join(data_path, 'image_3_predict.png')
-    predict_4 = os.path.join(data_path, 'image_4_predict.png')
+    data_path = '../submit'
+    fill_path = '../submit'
+    predict_3 = os.path.join(data_path, '0.742image_3_predict.png')
+    predict_4 = os.path.join(data_path, '0.742image_4_predict.png')
+    predict = [predict_3, predict_4]
     predict_3_ = os.path.join(fill_path, 'image_3_predict.png')
     predict_4_ = os.path.join(fill_path, 'image_4_predict.png')
-    predict = [predict_3, predict_4]
     predict_ = [predict_3_, predict_4_]
 
     for i in range(len(predict)):
@@ -29,45 +29,6 @@ def empty_fill():
         print('shape:', shape)
         height = shape[0]
         weight = shape[1]
-        #
-        # length = 500
-        # temp = 10
-        # for x in range(0, height, length // temp):
-        #     if x + length > shape[0]:
-        #         break
-        #     for y in range(0, weight, length // temp):
-        #         if y + length > shape[1]:
-        #             break
-        #         x1 = img_[x:x + length, y]
-        #         x1 = list(x1)
-        #         x2 = img_[x:x + length, y + length]
-        #         x2 = list(x2)
-        #         y1 = img_[x, y:y + length]
-        #         y1 = list(y1)
-        #         y2 = img_[x + length, y:y + length]
-        #         y2 = list(y2)
-        #         if len(set(x1)) == len(set(x2)) == len(set(y1)) == len(set(y2)) == 1 and x1[0] == x2[0] == y1[0] == y2[0]:
-        #             img_[x:x + length, y:y + length] = x1[0]
-        #
-        # length = 400
-        # temp = 8
-        # for x in range(0, height, length // temp):
-        #     if x + length > shape[0]:
-        #         break
-        #     for y in range(0, weight, length // temp):
-        #         if y + length > shape[1]:
-        #             break
-        #         x1 = img_[x:x + length, y]
-        #         x1 = list(x1)
-        #         x2 = img_[x:x + length, y + length]
-        #         x2 = list(x2)
-        #         y1 = img_[x, y:y + length]
-        #         y1 = list(y1)
-        #         y2 = img_[x + length, y:y + length]
-        #         y2 = list(y2)
-        #         if len(set(x1)) == len(set(x2)) == len(set(y1)) == len(set(y2)) == 1 and x1[0] == x2[0] == y1[0] == y2[0]:
-        #             img_[x:x + length, y:y + length] = x1[0]
-
         length = 300
         temp = 6
         for x in range(0, height, length // temp):
@@ -92,7 +53,7 @@ def empty_fill():
 
 def labelVis():
     print('labelvis..............')
-    fill_path = 'ZhiChao_Cui/MY/AgriculturalBrainAIChallenge/Datasets/predict/fill'
+    fill_path = '../submit'
     predict_3_ = os.path.join(fill_path, 'image_3_predict.png')
     predict_4_ = os.path.join(fill_path, 'image_4_predict.png')
     vis_img3 = os.path.join(fill_path, 'fill_vis_3.png')
@@ -134,10 +95,10 @@ def labelVis():
 
 def static():
     print('static..............')
-    data_path = 'ZhiChao_Cui/MY/AgriculturalBrainAIChallenge/Datasets/predict'
-    fill_path = 'ZhiChao_Cui/MY/AgriculturalBrainAIChallenge/Datasets/predict/fill'
-    predict_3 = os.path.join(data_path, 'image_3_predict.png')
-    predict_4 = os.path.join(data_path, 'image_4_predict.png')
+    data_path = '../submit'
+    fill_path = '../submit'
+    predict_3 = os.path.join(data_path, '0.742image_3_predict.png')
+    predict_4 = os.path.join(data_path, '0.742image_4_predict.png')
     predict_3_ = os.path.join(fill_path, 'image_3_predict.png')
     predict_4_ = os.path.join(fill_path, 'image_4_predict.png')
     predict = [predict_3, predict_4]
@@ -171,20 +132,3 @@ if __name__ == '__main__':
     empty_fill()
     labelVis()
     static()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

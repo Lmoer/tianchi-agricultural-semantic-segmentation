@@ -112,7 +112,7 @@ def main():
         
         optimizer1 = optim.SGD(model.parameters(),lr = config.lr,momentum=0.9,weight_decay=1e-4) 
         scheduler = lr_scheduler.CosineAnnealingLR(optimizer,T_max = (args.epochs // 9) + 1)
-		optimizer = SWA(optimizer1)
+        optimizer = SWA(optimizer1)
 
         
         
@@ -162,8 +162,8 @@ def main():
                 loss.backward()
                 optimizer.step()
                 optimizer.zero_grad()
-				if i > 10 and i%5 == 0:
-					optimizer.update_swa()
+                if i > 10 and i%5 == 0:
+                     optimizer.update_swa()
 
                 print('epoch: {0}\t'
                       'iter: {1}/{2}\t'
