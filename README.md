@@ -97,7 +97,7 @@ python train_focalloss.py --train --exp bn_lr7e-3 --epochs 20 --base_lr 0.007
 
 focalloss，在训练时可以根据样本的学习难易程度调整样本的loss权重，使模型可以更加关注难学习的样本。
 
-lovasz_losses ：语义分割一般用IOU去衡量模型的表现，但IOU不是一个可导函数，利用IOU直接训练模型会导致训练过程的不稳定。一个模型从坏到好，我们希望监督它的loss/metric的过渡是平滑的，直接暴力套用IoU显然不行，怎么优化IOU一直是语义分割要面临的问题，一般的baseline论文一般通过优化cross entropy去优化IoU。但优化cross entropy并不等同于优化IoU。
+lovasz_losses ：语义分割一般用IOU去衡量模型的表现，但IOU不是一个可导函数，利用IOU直接训练模型会导致训练过程的不稳定。一个模型从坏到好，我们希望监督它的loss/metric的过渡是平滑的，直接暴力套用IoU显然不行，怎么优化IOU一直是语义分割要面临的问题，一般的baseline论文一般通过优化cross entropy去优化IoU。但优化cross entropy并不等同于优化IoU。LovaszSoftmax可以作为IOU的替代目标函数。
 
 github链接https://github.com/bermanmaxim/LovaszSoftmax
 
