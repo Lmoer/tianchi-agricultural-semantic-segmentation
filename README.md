@@ -1,5 +1,6 @@
 ---
-typora-root-url: img
+
+
 ---
 
 # Project
@@ -138,9 +139,9 @@ python predict.py
 python fill_hole.py
 ```
 
-![1](/1.png)
+![1](img/1.png)
 
-![2](/2.png)
+![2](img/2.png)
 
 
 
