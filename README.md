@@ -115,7 +115,7 @@ python train_swa.py --train --exp bn_lr7e-3 --epochs 30 --base_lr 0.007
 python train_multiscale.py --train --exp bn_lr7e-3 --epochs 30 --base_lr 0.007
 ```
 
-（5）模型融合，投票。（使用backbone为resnet34，引入attention机制 的Unet 训练模型，以及deeplabv3模型的预测结果进行融合（文件夹Unet_resnet34/））
+（5）模型融合，投票。（使用backbone为resnet50，引入attention机制 的Unet 训练模型，以及deeplabv3模型的预测结果进行融合（文件夹Unet_resnet34/））
 
 ```
 python vote.py
