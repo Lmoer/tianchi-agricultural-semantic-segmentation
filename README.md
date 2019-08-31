@@ -1,4 +1,9 @@
+---
+typora-root-url: img
+---
+
 # Project
+
 ## 依赖项
 - *Python3.6*
 - *Pytorch 1.1.0*
@@ -132,3 +137,13 @@ python predict.py
 ```
 python fill_hole.py
 ```
+
+![1](/1.png)
+
+![2](/2.png)
+
+
+
+## 条件随机场后处理（pydensecrf）
+
+CRF文件夹下
